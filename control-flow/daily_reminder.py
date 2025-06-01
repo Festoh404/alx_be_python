@@ -10,10 +10,18 @@ match priority:
     case "low":
         message = f"'{task}' is a low priority task"
 
-if time_bound == "yes":
-     message += " that requires immediate attention today!"
-else:
-    message += ". Consider completing it when you have free time."
+    case _:
+        message = None
 
-print(f"Reminder: {message}")
+if message:
+    if time_bound == "yes":
+        message += " that requires immediate attention today!"
+    else:
+        message += ". Consider completing it when you have free time."
+    
+    print(f"Reminder: {message}")
+else:
+    print("Invalid priority selected. Please consider using 'high', 'medium' or 'low'")
+
+
         
