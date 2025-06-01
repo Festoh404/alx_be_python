@@ -1,8 +1,7 @@
 weather = input("WHat's the weather like today? (sunny/rainy/cold): ").lower()
 
 if weather == "sunny":
-    recommendation = "Wear a t-shirt and sunglasses."
-    print(recommendation)
+    print("Wear a t-shirt and sunglasses.")
 elif weather == "rainy":
     recommendation = "Don't forget your umbrella and a raincoat."
     print(recommendation)
